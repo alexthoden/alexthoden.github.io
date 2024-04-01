@@ -10970,3 +10970,12 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+@hide {
+    display: none;
+}
+
+@myDIV:hover + .hide {
+    display: block;
+    color: grey;
+}

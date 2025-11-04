@@ -5,7 +5,7 @@ const Skills = () => {
     {
       icon: Code2,
       title: "Programming & Data Science",
-      skills: ["Python", "R", "SQL", "Polars", "Dash", "Flask", "Shiny", "Tableau", "ggplot"],
+      skills: ["Python","Polars", "scikit-learn", "networkx", "R", "ggplot", "SQL", "Dash", "Flask", "Shiny", "Tableau" ],
       color: "accent",
     },
     {
@@ -23,7 +23,7 @@ const Skills = () => {
     {
       icon: Brain,
       title: "Web & App Development",
-      skills: ["React", "TypeScript", "Tailwind CSS", "JavaScript", "CSS"],
+      skills: ["Javascript", "React", "TypeScript", "CSS", "Tailwind CSS"],
       color: "accent",
     },
   ];

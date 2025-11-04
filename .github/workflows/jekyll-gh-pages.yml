@@ -34,18 +34,15 @@ jobs:
           debug_mode: true
           working_path: ./
 
-      - name: "Debug: list published files"
+      - name: "Debug: inspect origin/gh-pages without checkout"
         run: |
           echo '--- Action runner current dir ---'
           pwd
           echo '--- List . (repo) ---'
           ls -la
-          echo '--- Try to fetch gh-pages branch and list top-level files (if exists) ---'
-          git fetch origin gh-pages:gh-pages || echo 'no gh-pages branch'
-          if git show-ref --verify --quiet refs/heads/gh-pages; then
-            git checkout gh-pages
-            echo "--- On branch: $(git branch --show-current) ---"
-            ls -la
-          else
-            echo 'gh-pages branch not present; deploy action may use different branch or push to pages API. Check deployer logs above.'
-          fi
+          echo '--- Fetch origin/gh-pages refs only (no checkout) ---'
+          git fetch origin gh-pages || echo 'no gh-pages branch on origin'
+          echo '--- List top-level tree of origin/gh-pages (if exists) ---'
+          git ls-tree --name-only origin/gh-pages || echo 'origin/gh-pages not found'
+          echo '--- Show raw index.html from origin/gh-pages (if exists) ---'
+          curl -sS https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/gh-pages/index.html || echo 'could not fetch raw index.html from gh-pages'

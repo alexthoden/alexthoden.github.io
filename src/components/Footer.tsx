@@ -64,14 +64,14 @@ const Footer = () => {
               <h4 className="font-semibold mb-4">Connect</h4>
               <div className="flex gap-4">
                 <a
-                  href="mailto:alex.thoden@example.com"
+                  href="mailto:alexhokietho@gmail.com"
                   className="p-3 rounded-lg bg-primary-foreground/10 hover:bg-accent/20 transition-colors"
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://linkedin.com/in/alexthoden"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-primary-foreground/10 hover:bg-accent/20 transition-colors"
@@ -80,7 +80,7 @@ const Footer = () => {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/alexthoden"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-primary-foreground/10 hover:bg-accent/20 transition-colors"

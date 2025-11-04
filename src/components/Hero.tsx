@@ -37,7 +37,7 @@ const Hero = () => {
           </h1>
           <div className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-semibold text-primary-foreground/90">
-              Senior Associate Systems Engineer & Data Analyst
+              Senior Associate Engineer & Data Analyst
             </h2>
             <p className="text-xl md:text-2xl text-primary-foreground/80 font-medium">
               Bridging Engineering & Data-Driven Insights

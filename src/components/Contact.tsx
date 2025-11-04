@@ -107,7 +107,7 @@ const Contact = () => {
                     </span>
                   </a>
                   <a
-                    href="https://linkedin.com/in/alexthoden"
+                    href="https://www.linkedin.com/in/alexthoden"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-accent/10 transition-colors group"

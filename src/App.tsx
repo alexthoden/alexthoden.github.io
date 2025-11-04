@@ -8,12 +8,17 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Derive a clean basename from Vite's BASE_URL so the router works
+// both in dev (BASE_URL === '/') and when deployed to GitHub Pages
+const rawBase = import.meta.env.BASE_URL ?? "/";
+const basename = rawBase === "/" ? "/" : rawBase.replace(/\/$/, "");
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+  <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

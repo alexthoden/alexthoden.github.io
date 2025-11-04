@@ -15,8 +15,8 @@ const Projects = () => {
       title: "Wedding Website with RSVP Dashboard",
       description: "Designed and deployed a full-stack web app with native RSVP functionality and real-time attendance visualization. Features an intuitive user interface and responsive design.",
       tools: ["React", "TypeScript", "Tailwind CSS"],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/alexthoden/wedding-website",
+      demo: "http://thoden-woodward-wedding.s3-website.us-east-2.amazonaws.com/",
       category: "Full-Stack Development",
     },
   ];
@@ -65,7 +65,7 @@ const Projects = () => {
                   <Button
                     size="sm"
                     variant="outline"
-                    className="flex-1 border-accent/30 hover:bg-accent/10 hover:border-accent"
+                    className="flex-1 border-accent/30 bg-secondary text-card-foreground hover:bg-secondary/90 hover:border-accent"
                     asChild
                   >
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -73,7 +73,21 @@ const Projects = () => {
                       Code
                     </a>
                   </Button>
+                  {project.demo && project.demo !== "#" && (
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="flex-1 bg-accent hover:bg-accent/80 text-accent-foreground border-none"
+                      asChild
+                    >
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Demo
+                      </a>
+                    </Button>
+                  )}
                 </div>
+                
               </div>
             ))}
           </div>

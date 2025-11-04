@@ -34,7 +34,7 @@ jobs:
           debug_mode: true
           working_path: ./
 
-      - name: Debug: list published files
+      - name: "Debug: list published files"
         run: |
           echo '--- Action runner current dir ---'
           pwd
